@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Online Job Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>ONLINE JOB APPLICATION SYSTEM</h1>
+      <p>Government of Gujarat</p>
+    </header>
+
+    <table class="note">
+      <tbody>
+        <tr>
+          <td colspan="1" valign="top">
+            <div class="style21">
+              <font color="#ad0c03"><b>Note:</b></font>
+            </div>
+          </td>
+          <td colspan="4">
+            <div class="style21">
+              - Special Characters not allowed <%<>'()&+-;!>,.-* etc.
+              <br />
+              - <span class="required">*</span> indicates mandatory field.
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Personal Details -->
+
+    <div class="panel-title">Personal Details(ઉમેદવારની માહિતી)</div>
+    <div class="pannel">
+      <table>
+        <tr>
+          <td>
+            <label for="title">Title</label>
+            <br />
+            <select name="title" id="title">
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+              <option value="Dr.">Dr.</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="surname">Surname</label>
+            <span class="required">*</span>
+            <br />
+            <input name="surname" id="surname" type="text" />
+          </td>
+
+          <td>
+            <label for="firstname">First Name</label>
+            <span class="required">*</span>
+            <br />
+            <input name="firstname" id="firstname" type="text" />
+          </td>
+
+          <td>
+            <label for="fatherhusbandname">Father/Husband's Name</label>
+            <br />
+            <input
+              name="fatherhusbandname"
+              id="fatherhusbandname"
+              type="text"
+            />
+          </td>
+
+          <td>
+            <label for="mothername">Mother's Name</label>
+            <span class="required">*</span>
+            <br />
+            <input name="mothername" id="mothername" type="text" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>Gender</label>
+            <span class="required">*</span><br />
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male</label> <br />
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Female</label><br />
+          </td>
+
+          <td>
+            <label>Reselect Gender</label><span class="required">*</span><br />
+            <input type="radio" name="gender" id="remale" value="male" />
+            <label for="remale">Male</label> <br />
+            <input type="radio" name="gender" id="refemale" value="female" />
+            <label for="refemale">Female</label><br />
+          </td>
+
+          <td>
+            <label for="dob">Date of Birth</label><span class="required">*</span
+            ><br />
+            <input type="date" id="dob" name="dob" />
+          </td>
+
+          <td>
+            <label>Marital Status</label><span class="required">*</span><br />
+            <input type="radio" name="married" id="married" value="married" />
+            <label for="married" value="married" name="maritalstatus"
+              >Married</label
+            >
+            <input
+              type="radio"
+              name="unmarried"
+              id="unmarried"
+              value="unmarried"
+            />
+            <label for="unmarried" value="unmarried" name="maritalstatus"
+              >Unmarried</label
+            >
+            <input
+              type="radio"
+              name="separated"
+              id="separated"
+              value="separated"
+            />
+            <label for="separated" name="separated" name="maritalstatus"
+              >Separated</label
+            >
+          </td>
+
+          <td>
+            <label for="category">Category</label
+            ><span class="required">*</span>
+            <select name="category" id="category">
+              <option value="default">--select category--</option>
+              <option value="General">General</option>
+              <option value="OBC">OBC</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Communication Details -->
+    <div class="panel-title">Communication Details</div>
+    <table>
+      <tr>
+        <td>
+          <label for="presentadd">Present Address</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <textarea
+            type="address"
+            name="address"
+            id="presentadd"
+            autocomplete="on"
+          ></textarea>
+        </td>
+        <td>
+          <label for="permanentadd">Permanent Address</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <textarea
+            type="address"
+            name="address"
+            id="permanentadd"
+            autocomplete="off"
+          ></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="state">State</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="state" id="state">
+            <option value="Gujarat">Gujarat</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Panjab">Panjab</option>
+            <option value="Bihar">Bihar</option>
+          </select>
+        </td>
+        <td>
+          <label for="cstate">State</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="state" id="cstate">
+            <option value="Gujarat">Gujarat</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Panjab">Panjab</option>
+            <option value="Bihar">Bihar</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="district">District</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="district" id="district">
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+          </select>
+        </td>
+        <td>
+          <label for="cdistrict">District</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="district" id="cdistrict">
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+            <option value="Surat">Surat</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="taluka">Taluka</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="taluka" id="taluka">
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+          </select>
+        </td>
+        <td>
+          <label for="retaluka">Taluka</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <select name="retaluka" id="retaluka">
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+            <option value="Chorasi">Chorasi</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="pincode">Pin Code</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="number" id="pincode" />
+        </td>
+        <td>
+          <label for="cpincode">Pin Code</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="number" id="cpincode" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="mobile">Mobile No.</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="tel" name="mobileno" id="mobile" autocomplete="on" />
+          <span class="required">
+            <br />SMS Alert મેળવવા માટે <br />(OTP Will be Sent to Verify Mobile
+            No)
+          </span>
+        </td>
+        <td>
+          <label for="email">Email No.</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="email" name="email" id="email" autocomplete="on" />
+          <span class="required">
+            <br />Registration Details Will be Sent to EMAIL
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="cmobile">Re-Type Mobile No.</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="tel" name="mobileno" id="cmobile" autocomplete="on" />
+        </td>
+        <td>
+          <label for="cemail">Re-Type Email No.</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="email" name="email" id="cemail" autocomplete="on" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="nationality">Nationality</label>
+          <span class="required">*</span>
+        </td>
+        <td>
+          <input type="text" name="nationality" id="nationality" />
+        </td>
+      </tr>
+    </table>
+
+    <!-- Other Details -->
+    <div class="panel-title">Other Details (અન્ય માહિતી)</div>
+    <table>
+      <tr>
+        <td>
+          <label>શુ તમે રમતગમતના વધારાના ગુણ મેળવવા લાયકાત ધરાવો છો?</label>
+          <span class="required">*</span>
+          <br />
+          <input type="radio" name="sports" id="sports-yes" />
+          <label for="sports-yes">Yes</label>
+          <input type="radio" name="sports" id="sports-no" />
+          <label for="sports-no">No</label>
+        </td>
+
+        <td>
+          <label for="nameofsports">Name of Sports</label>
+          <br />
+          <select name="Name of Sports" id="nameofsports">
+            <option value="Football">Football</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Swimming">Swimming</option>
+          </select>
+        </td>
+
+        <td>
+          <label for="sportlevel">Sport Level(રમત નુ સ્તર)</label>
+          <br />
+          <select name="Sports Level" id="sportlevel">
+            <option value="First">First</option>
+            <option value="First">First</option>
+            <option value="First">First</option>
+            <option value="First">First</option>
+            <option value="First">First</option>
+          </select>
+        </td>
+
+        <td>
+          <label for="sportsyear">રમતમા ભાગ લીધાનુ વર્ષ</label>
+          <br />
+          <input id="sportsyear" type="" />
+        </td>
+
+        <td>
+          <label for="sportscertificate"
+            >રમતનુ પ્રમાણપત્ર આપનાર ફેડરેશન/સત્ત્તાધિકારી</label
+          >
+          <br />
+          <input name="Sports Certificate" id="sportscertificate" type="text" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label
+            >Physically Challanged<br />(As Per Published Advertisement
+            Percentage)</label
+          >
+        </td>
+
+        <td>
+          <input type="radio" name="" id="blindness" />
+          <label for="blindness">Blindness</label>
+          <input type="radio" name="" id="deaf-dumb" />
+          <label for="deaf-dumb">Deaf & Dumb</label>
+          <input type="radio" name="" id="not-applicable" />
+          <label for="not-applicable">Not Applicable</label><br />
+          <input type="radio" name="" id="low-vision" />
+          <label for="low-vision">Low Vision</label>
+          <input type="radio" name="" id="hearing-handicap" />
+          <label for="hearing-handicap">Hearing Handicap</label>
+          <input type="radio" name="" id="orthopedics" />
+          <label for="orthopedics">Orthopedics (OA, OL, BL, OAL)</label><br />
+          <input type="radio" name="" id="other" />
+          <label for="other">Other</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>Widow(વિધવા)</label><br />
+          <input type="radio" name="widow" id="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="widow" id="no" />
+          <label for="no">No</label>
+        </td>
+
+        <td>
+          <label for="widowcerti">Widow Certificate</label><br />
+          <input type="number" id="widowcerti" />
+        </td>
+
+        <td>
+          <label for="widowcertidate">Widow Certificate Date</label><br />
+          <input type="date" id="widowcertidate" />
+        </td>
+
+        <td>
+          <label for="issuedofficer">પ્રમાણપત્ર આપનાર સત્ત્તાધિકારી</label>
+          <select name="" id="issuedofficer">
+            <option value="default">Select</option>
+            <option value="">Officer 1</option>
+            <option value="">Officer 2</option>
+            <option value="">Officer 3</option>
+            <option value="">Officer 4</option>
+            <option value="">Officer 5</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>Ex-Soldier(Army, Navy, Air Force)</label>
+          <input type="radio" name="" id="yes-soldier" />
+          <label for="yes-soldier">Yes</label>
+          <input type="radio" name="" id="no-soldier" />
+          <label for="no-soldier">No</label>
+        </td>
+
+        <td>
+          <label for="from-date">From Date</label><br />
+          <input type="date" id="from-date" />
+        </td>
+
+        <td>
+          <label for="to-date">To Date</label><br />
+          <input type="date" id="to-date" />
+        </td>
+
+        <td>
+          <label for="id-no">ExServiceman Identity Card No.</label>
+          <input type="text" name="" id="id-no" />
+        </td>
+
+        <td>
+          <label for="soldier-issued-officer"
+            >માજી સૈનિક ઓળખ કાર્ડ આપનાર સત્ત્તાધિકારી</label
+          >
+          <select name="" id="soldier-issued-officer">
+            <option value="">select</option>
+            <option value="">select</option>
+            <option value="">select</option>
+            <option value="">select</option>
+            <option value="">select</option>
+            <option value="">select</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>Currently working as Gujarat State Goverment Employee</label>
+          <input type="radio" name="" id="yes-gov-emp" />
+          <label for="yes-gov-emp">Yes</label>
+          <input type="radio" name="" id="no-gov-emp" />
+          <label for="no-gov-emp">No</label>
+        </td>
+
+        <td>
+          <label for="join-date-gov">Joining Date in Goverment Service</label>
+          <input type="date" name="" id="join-date-gov" /><br />(dd/mm/yyyy)
+        </td>
+
+        <td>
+          <label for="name-of-dept">Name of Department(ખાતાનુ નામ)</label>
+          <input type="text" id="name-of-dept" />
+        </td>
+      </tr>
+    </table>
+
+    <div class="row">
+      <!-- Language Details -->
+      <div class="panel-title">Language Details</div>
+      <table>
+        <tr>
+          <td>
+            <p>Language Proficiency</p>
+          </td>
+          <td>
+            <p>Language</p>
+          </td>
+
+          <td>
+            <p>Read</p>
+          </td>
+
+          <td>
+            <p>Write</p>
+          </td>
+
+          <td>Speak</td>
+        </tr>
+
+        <tr>
+          <td></td>
+
+          <td><label>English</label></td>
+
+          <td>
+            <input type="checkbox" name="" id="read-eng" />
+            <label for="read-eng"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="write-eng" />
+            <label for="write-eng"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="speak-eng" />
+            <label for="speak-eng"></label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+
+          <td><label>Hindi</label></td>
+
+          <td>
+            <input type="checkbox" name="" id="read-hin" />
+            <label for="read-hin"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="write-hin" />
+            <label for="write-hin"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="speak-hin" />
+            <label for="speak-hin"></label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+
+          <td><label>Gujarati</label></td>
+
+          <td>
+            <input type="checkbox" name="" id="read-guj" />
+            <label for="read-guj"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="write-guj" />
+            <label for="write-guj"></label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="" id="speak-guj" />
+            <label for="speak-guj"></label>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Upload Photography and Signature -->
+      <div class="panel-instruction">
+        Photo અને Signature Upload કરવા માટેની અગત્યની સુચનાઓ : -
+      </div>
+      <div class="instruction">
+        (i) Photo સ્કેન કરીને JPG ફોર્મેટમાં અપલોડ કરવો.
+        <br />
+        (ii) Photo નું માપ 5 સે.મી. લંબાઇ અને 3.6 સે.મી. પહોળાઇનુ હોવુ જોઇએ.
+        <br />
+        (iii) Photo અને Signature ની Size 15 KB થી વધારે રાખવી નહિ.
+        <br />
+        (iv) જો Photo અને Signature ની Size 15 KB થી વધી જાયતો Scanner ના DPI
+        Resolution ના સેટીંગ બદલીને ફરીથી સ્કેન કરવુ .
+        <br />
+        (v) Signature માટે સફેદ કાગળ ઉપર કાળા/બ્લ્યુ કલરમાં સહી કરીને તેને સ્કેન
+        કરીને JPG ફોર્મેટમાં અપલોડ કરો.
+        <br />
+        (vi) Signature નું માપ 2.5 સે.મી. લંબાઇ અને 7.5 સે.મી. પહોળાઇનુ હોવુ
+        જોઇએ.
+      </div>
+    </div>
+    <!-- Upload Photography -->
+    <div class="panel-title">Upload Photograph/ફોટો અપલોડ કરો</div>
+    <table>
+      <tr>
+        <td>
+          <p>
+            Note : Quality of Photograph should be Good Enough to Be
+            Identifiable and Acceptable. <br />નોંધ : અપલોડ કરેલ ફોટોગ્રાફ ની
+            ગુણવત્તા ઓળખી શકાય તેવી અને સ્વીકાર્ય હોવી જરુરી છે.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="file" name="" id="photo" />
+          <label for="photo"></label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button type="submit">Upload</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p>
+            ફોટાનું માપ: 5 સે.મી. લંબાઇ 3.6 સે.મી. પહોળાઇાઇ <br />
+            Photo ની Size 15 KB થી વધારે રાખવી નહિ.
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Upload Signature -->
+    <div class="panel-title">Upload Signature/સહી અપલોડ કરો</div>
+    <table>
+      <tr>
+        <td>
+          <p>
+            Note : Please Sign on White Paper with Dark Pen and Scan it in JPG
+            format. <br />
+            નોંધ : સફેદ કગળ ઉપર કાળા/બ્લ્યુ કલરમાં સહી કરીને તેને સ્કેન કરીને
+            JPG ફોર્મેટમાં અપલોડ કરો.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="file" name="" id="sign" />
+          <label for="sign"></label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button type="submit">Upload</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p>
+            સહીનું માપ: 2.5 સે.મી. લંબાઇ 7.5 સે.મી. પહોળાઇ <br />Signature ની
+            Size 15 KB થી વધારે રાખવી નહિ.
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Declartion -->
+    <div class="panel-title">Declartion</div>
+    <table>
+      <tr>
+        <td>
+          <span class="required">
+            આથી હું ખાતરીપૂર્વક જાણુ છુ કે ઉપર જણાવેલ વિગતો મારી જાણ મુજબ સાચી છે
+            <br>
+            નોંધ: ONE TIME REGISTRATION એ માત્ર ઉમેદવારોને અરજી કરવા માટેની
+            વધારાની સગવડ છે. ONE TIME REGISTRATION નો હેતું ઉમેદવારોને OJAS મા
+            Online આવતી જાહેરાતમાં પોતાની વિગતો વારંવાર ભરવી ન પડે અને અરજી
+            ઝડપથી થાય માત્ર તે માટે છે. આનો અર્થ એ નથી કે REGISTRATION કરવાથી
+            જાહેરાત (જે તે જાહેરાત/કોઈપણ જાહેરાત) માટે અરજી થયેલ છે. ઉમેદવારે
+            OJAS દ્વારા પ્રસિધ્ધ થયેલ જે તે જાહેરાત માટે OTR અથવા OTR વગર પોતાની
+            અરજી તે જાહેરાત માટે અલગથી કરવાની રહેશે.
+          </span>
+          <br>
+          <input type="radio" name="" id="yes-declartion" />
+          <label for="yes-declartion">Yes</label>
+          <input type="radio" name="" id="no-declartion" />
+          <label for="no-declartion">No</label>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Captcha -->
+    <div class="panel-title">Captcha</div>
+    <table>
+      <tr>
+        <td>
+          <p class="captcha">3PR78</p>
+        </td>
+      </tr>
+    </table>
+
+    <button type="submit">Save</button>
+  </body>
+</html>
