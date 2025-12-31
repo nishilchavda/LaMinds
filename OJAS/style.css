@@ -1,25 +1,157 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-table{
-    border: 1px solid #337ab7;
-    border-radius: 0px 0px 5px 5px;
+/* 
+table{ */
+
+.pannel {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 20px 50px 20px 50px;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
-.panel-title{
-    background-color: #337ab7;
-    padding: 8px;
-    border-radius: 5px 5px 0px 0px;
-    color: white;
-    
+
+.pannel table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.required{
+
+.pannel td {
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.required {
     color: red;
 }
 
-.note{
+.note {
     border: 1px solid #dddddd;
+}
+
+.success-btn {
+    color: #ffffff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.panel-instruction {
+    border: 1px solid;
+    border-color:  #ebccd1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.panel-instruction .panel-title{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.panel-title{
+    padding: 10px 15px;
+    background-color: #337ab7;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+option,select,
+textarea{
+    display: block;
+    width: 80%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    
+}
+
+.row .pannel {
+  width: 50%;
+}
+
+
+.captcha {
+  display: inline-block;
+  background: #f5c400;
+  padding: 6px 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid #c9a000;
+}
+
+.note {
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+  border-collapse: collapse;
+  background: #fffbe6;
+  border: 1px solid #e0d9b5;
+}
+
+.note td {
+  padding: 6px 8px;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+.navbar {
+  width: 100%;
+  background: #0b4fa2; /* OJAS dark blue */
+  border-bottom: 2px solid #083b7a;
+  border-radius: 5px;
+  height: 40px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.main-menu {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  border-right: 1px solid #1e63b7;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
 }
