@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day 8</title>
+    <link rel="stylesheet" href="/Day 8/style.css" />
+  </head>
+  <body>
+    <h2>
+      1. create a divs with top, right, left, bottom borders with border style,
+      border width, border color (ex. first div show only top border with 1px
+      width, solid and black color)
+    </h2>
+    <div class="div1">Top Border</div>
+    <br />
+    <div class="div2">Right Border</div>
+    <br />
+    <div class="div3">Left Border</div>
+    <br />
+    <div class="div4">Bottom Border</div>
+
+    <h2>
+      2. create a div with pseudo class hover (ex. when you hover the div that
+      change that color, size, position etc)
+    </h2>
+    <br />
+
+    <div class="pseudo"></div>
+
+    <br />
+
+    <h2>
+      3. create a anchor tag that show pseudo class like :acitve and :visited
+      (ex. normal anchor tag vs pseudo anchor tag)
+    </h2>
+    <a href="#">Normal Link</a>
+    <br />
+    <a class="link" href="#">Pseudo Link</a>
+
+    <br />
+
+    <h2>
+      4. create a section with different html tag and that show pesudo element
+      like first-letter, first-line, before, after, selection (ex. in p tag when
+      you select the text that show different color of background like red color
+      background and white color text)
+    </h2>
+    <h3>---First Letter</h3>
+    <p class="first-letter">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptatum
+      voluptatibus. Ex ut ullam architecto saepe, quas nulla quaerat deserunt
+      non qui repellendus neque ratione! Doloremque aperiam voluptas corrupti
+      quod.
+    </p>
+
+    <br />
+    <h3>---First Line</h3>
+    <p class="first-line">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptatum
+      voluptatibus. Ex ut ullam architecto saepe, quas nulla quaerat deserunt
+      non qui repellendus neque ratione! Doloremque aperiam voluptas corrupti
+      quod.
+    </p>
+
+    <br />
+    <h3>---After Before</h3>
+    <div class="a-f">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+        voluptatum voluptatibus. Ex ut ullam architecto saepe, quas nulla
+        quaerat deserunt non qui repellendus neque ratione! Doloremque aperiam
+        voluptas corrupti quod.
+      </p>
+    </div>
+
+    <br />
+    <h3>---Selection</h3>
+    <p class="selection">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptatum
+      voluptatibus. Ex ut ullam architecto saepe, quas nulla quaerat deserunt
+      non qui repellendus neque ratione! Doloremque aperiam voluptas corrupti
+      quod.
+    </p>
+
+    <br />
+
+    <h2>
+      5. Show different types of display like none, block, inline, inline-block,
+      flex, grid (ex. h1 show inline display vs h1 without inline display
+      (without style))
+    </h2>
+
+    <br />
+    <div class="h1-1">
+      <h1>Display None</h1>
+      <h1>Display None</h1>
+    </div>
+    <br />
+    <div class="h1-2">
+      <h1>Display Block</h1>
+      <h1>Display Block</h1>
+    </div>
+    <br />
+    <div class="h1-3">
+      <h1>Display inline</h1>
+      <h1>Display inline</h1>
+    </div>
+    <br />
+    <div class="h1-4">
+      <span>1.Display inline-block</span>
+      <span>2.Display inline-block</span>
+    </div>
+    <br />
+    <div class="h1-5">
+      <h1>1.Display Flex</h1>
+      <h1>2.Display Flex</h1>
+    </div>
+    <br />
+    <div class="h1-6">
+      <h1>1.Display Grid</h1>
+      <h1>2.Display Grid</h1>
+    </div>
+    <br />
+    <h2>
+      6. create a section that show position property like absolute, fixed,
+      sticky, relative (ex. p tag that show fixed position property)
+    </h2>
+    <br />
+
+    <section class="demo">
+      <p class="absolute">Absolute Position</p>
+      <p class="fixed">Fixed Position</p>
+      <p class="sticky">Sticky Position</p>
+      <p class="relative">Relative Position</p>
+    </section>
+
+    <br />
+
+    <h2>
+      7. create div that show a image when user hover that div image will be
+      zoom-in or zoom-out (overflow: visible, auto, hidden)
+    </h2>
+    <br />
+
+    <div class="container">
+      <div>
+        <h3>Overflow: Visible</h3>
+        <div class="box visible">
+          <img
+            src="https://petapixel.com/assets/uploads/2024/01/High-resolution-image-of-sun-800x420.jpg"
+            alt="Image"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h3>Overflow: Hidden</h3>
+        <div class="box hidden">
+          <img
+            src="https://petapixel.com/assets/uploads/2024/01/High-resolution-image-of-sun-800x420.jpg"
+            alt="Image"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h3>Overflow: Auto</h3>
+        <div class="box auto">
+          <img
+            src="https://petapixel.com/assets/uploads/2024/01/High-resolution-image-of-sun-800x420.jpg"
+            alt="Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <h2>
+      8. show html list with different type of bullets with css
+      {list-style-type, list-style-position, list-style-image, } (ex. unordered
+      list with square bullets)
+    </h2>
+
+    <br />
+    <h2>1. list-style-type</h2>
+    <ul class="square">
+      <li>Square Bullet</li>
+    </ul>
+
+    <ul class="circle">
+      <li>Circle Bullet</li>
+    </ul>
+
+    <ol class="roman">
+      <li>Roman Number</li>
+    </ol>
+
+    <!-- list-style-position -->
+    <h2>2. list-style-position</h2>
+    <ul class="inside">
+      <li>List Style Position Inside</li>
+      <li>List Style Position Inside</li>
+    </ul>
+
+    <ul class="outside">
+      <li>List Style Position Outside</li>
+      <li>List Style Position Outside</li>
+    </ul>
+
+    <!-- list-style-image -->
+    <h2>3. list-style-image</h2>
+    <ul class="image">
+      <li>Custom Image Bullet</li>
+      <li>Custom Image Bullet</li>
+      <li>Custom Image Bullet</li>
+    </ul>
+
+    <br />
+
+    <h2>
+      9. create a section that show css visibility property like hidden and
+      visible (ex. section with three image when user hover on images that hide
+      and show)
+    </h2>
+
+    <br />
+
+    <section class="img">
+      <img
+        class="img1"
+        src="https://petapixel.com/assets/uploads/2024/01/High-resolution-image-of-sun-800x420.jpg"
+        alt="hidden"
+      />
+      <img
+        class="img1"
+        src="https://petapixel.com/assets/uploads/2024/01/High-resolution-image-of-sun-800x420.jpg"
+        alt="visible"
+      />
+    </section>
+
+    <br />
+
+    <h2>
+      10. create a section that show different type of cursors like pointer,
+      auto, all-scroll, copy, default, move, e-resize, w-resize, n-resize,
+      s-resize, text, wait, help, progress, not-allowed, zoom-in, zoom-out,
+      no-drop (Min. 8 types) (ex. create a div that show cursor pointer when
+      user hover on it)
+    </h2>
+
+    <br />
+
+    <section class="cursor">
+      <div class="box pointer">pointer</div>
+      <div class="box auto">auto</div>
+      <div class="box all-scroll">scroll</div>
+      <div class="box copy">copy</div>
+      <div class="box default">default</div>
+      <div class="box move">move</div>
+      <div class="box e-resize">e-resize</div>
+      <div class="box w-resize">w-resize</div>
+      <div class="box n-resize">n-resize</div>
+      <div class="box s-resize">s-resize</div>
+      <div class="box text">text</div>
+      <div class="box wait">wait</div>
+      <div class="box help">help</div>
+      <div class="box progress">progress</div>
+      <div class="box not-allowed">not-allowed</div>
+      <div class="box zoom-in">zoom-in</div>
+      <div class="box zoom-out">zoom-out</div>
+      <div class="box no-drop">no-drop</div>
+    </section>
+
+    <br />
+
+    <h2>11. create a btn with div and css</h2>
+
+    <br />
+
+    <button class="btn">Button</button>
+
+    <br />
+
+    <h2>
+      12. show all css fitlers on image {filters like brightness, blur, Sepia,
+      Grayscale, Hue-rotate, Contrast, Drop-shadow, Saturate} (don't change that
+      image, same image show diffrent filters) (ex. image that blur effect )
+    </h2>
+
+    <br />
+
+    <section class="img-filter">
+      <img
+        class="brightness"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="blur"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="sepia"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="grayscale"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="hue-rotate"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="contarst"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="drop-down"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+      <img
+        class="saturate"
+        src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"
+        alt=""
+      />
+    </section>
+
+    <br />
+
+    <h2>
+      13. create a divs that show different color with different color syntax
+      like hex, rgb, rgba, hsl, hsla, color name
+    </h2>
+
+    <br />
+
+    <section class="color">
+      <div class="box-color hex"></div>
+      <div class="box-color rgb"></div>
+      <div class="box-color rgba"></div>
+      <div class="box-color hsl"></div>
+      <div class="box-color hsla"></div>
+      <div class="box-color color-name"></div>
+    </section>
+
+    <br />
+
+    <h2>
+      14. All CSS Selectors like element selector, class selector, group
+      selecors, universal selector, id selector
+    </h2>
+
+    
+
+    <br />
+  </body>
+</html>

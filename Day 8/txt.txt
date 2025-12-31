@@ -1,0 +1,50 @@
+Day 8 Task:
+1. create a divs with top, right, left, bottom borders with border style, border width, border color 
+(ex. first div show only top border with 1px width, solid and black color)
+ 
+ 
+2. create a div with pseudo class hover 
+(ex. when you hover the div that change that color, size, position etc)
+ 
+3. create a anchor tag that show pseudo class like :acitve and :visited 
+(ex. normal anchor tag vs pseudo anchor tag)
+ 
+4. create a section with different html tag and that show pesudo element like first-letter, first-line, before, after, selection 
+(ex. in p tag when you select the text that show different color of background like red color background and white color text)
+ 
+5. Show different types of display like none, block, inline, inline-block, flex, grid
+(ex. h1 show inline display vs h1 without inline display (without style))
+ 
+6. create a section that show position property like absolute, fixed, sticky, relative (ex. p tag that show fixed position property)
+ 
+7. create div that show a image when user hover that div image will be zoom-in or zoom-out (overflow: visible, auto, hidden)
+ 
+8. show html list with different type of bullets with css {list-style-type, list-style-position, list-style-image, }
+(ex. unordered list with square bullets)
+ 
+9. create a section that show css visibility property like hidden and visible
+(ex. section with three image when user hover on images that hide and show)
+ 
+10. create a section that show different type of cursors like pointer, auto, all-scroll, copy, default, move, e-resize, w-resize, n-resize, s-resize, text, wait, help, progress, not-allowed, zoom-in, zoom-out, no-drop (Min. 8 types)
+(ex. create a div that show cursor pointer when user hover on it)
+ 
+11. create a btn with div and css
+ 
+12. show all css fitlers on image {filters like brightness, blur, Sepia, Grayscale, Hue-rotate, Contrast, Drop-shadow, Saturate} (don't change that image, same image show diffrent filters)
+(ex. image that blur effect )
+ 
+13. create a divs that show different color with different color syntax like hex, rgb, rgba, hsl, hsla, color name
+ 
+14. All CSS Selectors like element selector, class selector, group selecors, universal selector, id selector
+ 
+ 
+15. create a div that show box-shadow and h1 text that show text-shadow
+ 
+16. create a two div one is show radial gradient and another is show linear gradient
+ 
+17. write a text that show different types of text property like font-size, font-family, font-variant, font-color, font-style, font-weight 
+(ex. first h1 show pain text, second show bigger font size, third show different font-family with font-size)
+ 
+18. use three libraries like google font, font-awesome, bootstrap etc. (don't use svg)
+
+ 
