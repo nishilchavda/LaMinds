@@ -1,6 +1,3 @@
-Here’s a clean, **GitHub-ready README.md** you can use to explain what you learned during your internship. I’ve structured it professionally, fixed wording, and kept examples close to your original code so it still feels like *your learning*.
-
----
 
 # JavaScript Variables: `var`, `let`, and `const`
 
@@ -225,22 +222,6 @@ temp_d = 12; // initialization
 * Avoid using undeclared variables
 * Understand scope to prevent bugs
 * TDZ helps catch errors early
-* Hoisting behaves differently for each keyword
-
+* Hoisting behaves differently for each keyword 
 ---
 
-## 📌 Author
-
-**Intern Learning JavaScript**
-Feel free to fork, star ⭐, and improve this repository!
-
----
-
-If you want, I can:
-
-* Make it **shorter**
-* Add **real-world examples**
-* Convert it into **interview notes**
-* Add **code output screenshots**
-
-Just tell me 👍
