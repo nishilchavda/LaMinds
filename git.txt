@@ -1,0 +1,49 @@
+Remote Repo - Github Repo (folder)
+
+Local Repo - Computer Folder
+
+Version Control: 
+Git
+Github
+
+Method 1 :
+Use Case - Github Repo - Clone- computer
+1. Link - copy
+2. Git clone <link>
+3.  
+Method 2 :
+Use Case - Computer Folder - github push
+1. git init
+2. git remote add origin https://github.com/nishilchavda/LaMinds
+
+------------------------------------------
+
+set:
+git config --global user.name "nishilchavda"
+git config --global user.email nishilchavda@gmail.com
+git config --list
+
+unset:
+git config --global --unset user.name
+git config --global --unset user.email
+
+
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
+
+git branch 
+git branch <branch name>
+ex. git branch development 
+git branch 
+git checkout <branch name>
+ex. git checkout development  
+
+-------------------------------------
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/nishilchavda/LaMinds
+git push -u origin main
