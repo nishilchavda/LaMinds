@@ -74,7 +74,7 @@ console.log(j);
 let j = 12; 
 
 
-//Hosting Impact
+//osting ImpactHosting Impact
 //Hosting --> when your create a variable into js that break into two parts first is declare part that go to up and there  initialize part that go down
 var temp_d = 12;
 // var temp_d; --> undefined; --> that go to up
