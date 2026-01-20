@@ -1,4 +1,4 @@
-# Day 1
+# Day 1 of JS
 # JavaScript Variables: `var`, `let`, and `const`
 
 This repository demonstrates core JavaScript concepts related to **variables**, including `var`, `let`, and `const`, along with **scope**, **hoisting**, and the **Temporal Dead Zone (TDZ)**.
@@ -224,4 +224,252 @@ temp_d = 12; // initialization
 * TDZ helps catch errors early
 * Hoisting behaves differently for each keyword 
 ---
+
+# Day 2 of JS
+# JavaScript Data Types – Internship Learning
+
+This repository contains my notes and practice code from my internship, where I learned about **JavaScript Data Types**, their behavior, and important concepts like **primitive vs non-primitive types**, **type coercion**, and **truthy/falsy values**.
+
+---
+
+## 📌 JavaScript Data Types
+
+JavaScript has **two main types of data types**:
+
+### 1️⃣ Primitive Data Types
+- Stored by **value**
+- When copied, the **actual value** is copied
+
+**Types:**
+- `string`
+- `number`
+- `boolean`
+- `null`
+- `undefined`
+- `symbol`
+- `bigint`
+
+#### Example:
+```js
+let a = 25;
+let b = a; // value is copied
+````
+
+---
+
+### 2️⃣ Non-Primitive (Reference) Data Types
+
+* Stored by **reference**
+* When copied, the **reference to the original object** is shared
+
+**Types:**
+
+* Arrays `[]`
+* Objects `{}`
+* Functions `()`
+
+#### Example:
+
+```js
+let d = [1, 2, 3];
+let e = d; // reference is copied
+```
+
+---
+
+## 🔹 Primitive Data Types Explained
+
+### String
+
+Strings can be created using:
+
+* Single quotes `' '`
+* Double quotes `" "`
+* Backticks `` ` ` ``
+
+```js
+let d = 'Nishil';
+d = "Nishil";
+d = `Nishil`;
+```
+
+---
+
+### Number
+
+```js
+let e = 12;
+e = 12.25;
+e = -25;
+```
+
+---
+
+### Boolean
+
+```js
+let f = true;
+f = false;
+```
+
+---
+
+### Null
+
+* Value is **intentionally empty**
+
+```js
+let g = null;
+```
+
+---
+
+### Undefined
+
+* Variable declared but **no value assigned**
+
+```js
+let h; // undefined
+```
+
+---
+
+### Symbol
+
+* Creates a **unique and immutable value**
+
+```js
+let u1 = Symbol("uid");
+let u2 = Symbol("uid");
+
+console.log(u1 === u2); // false
+
+let obj = { uid: 1, name: "test", email: "test@test.com" };
+let u3 = "uid";
+let u4 = Symbol("uid");
+
+// obj[u3] = "001";
+```
+
+---
+
+### BigInt
+
+* Used for numbers **larger than Number.MAX_SAFE_INTEGER**
+
+```js
+let number = 9007199254740991;
+number = number + 6; // precision issue
+
+let num2 = 900719925470991n;
+num2 + 3n;
+```
+
+---
+
+## 🔹 Non-Primitive Data Types
+
+```js
+let temp_array = ["user1", "user2", "user3"];
+
+let temp_obj = { 
+  name: "test", 
+  age: 9, 
+  phone_number: 1234567890 
+};
+
+let profiles = [
+  { name: "test", age: 9, phone_number: 1234567890 },
+  { name: "test1", age: 19, phone_number: 2234567890 },
+  { name: "test2", age: 29, phone_number: 3234567890 }
+];
+
+function name(params) {}
+```
+
+---
+
+## 🔄 Dynamic Typing in JavaScript
+
+JavaScript allows variables to change their data type at runtime.
+
+```js
+let u_name = "username";
+u_name = 123;
+u_name = {};
+```
+
+> This is one reason **TypeScript** is often used with JavaScript.
+
+---
+
+## ⚠️ `typeof` Quirks
+
+```js
+typeof 12        // "number"
+typeof NaN       // "number"
+typeof null      // "object"
+1 + "1"          // "11"
+1 == "1"         // true
+1 === "1"        // false
+```
+
+* `NaN` means **Not a Number**, but its type is still `number`
+* Example:
+
+```js
+"hello" - 5 // NaN
+```
+
+---
+
+## 🔀 Type Coercion
+
+JavaScript automatically converts types when needed.
+
+```js
+"5" + 1 // "51" (string concatenation)
+"5" - 1 // 4 (number subtraction)
+```
+
+---
+
+## ✅ Truthy vs ❌ Falsy Values
+
+### Falsy Values:
+
+```js
+0
+false
+""
+null
+undefined
+NaN
+document.all
+```
+
+### Examples:
+
+```js
+!!0        // false
+if (null) {}  // false
+if (-1) {}    // true
+```
+
+> All values are **truthy** except the falsy ones listed above.
+
+---
+
+## 🚀 Conclusion
+
+This repository documents my understanding of **JavaScript data types** and core concepts learned during my internship. It serves as a reference for future learning and practice.
+
+---
+
+### 🧑‍💻 Author
+
+**Nishil**
+
+```
+
 
