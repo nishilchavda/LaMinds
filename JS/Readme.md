@@ -470,6 +470,4 @@ This repository documents my understanding of **JavaScript data types** and core
 
 **Nishil**
 
-```
-
 
