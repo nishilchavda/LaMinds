@@ -1,4 +1,4 @@
-
+# Day 1
 # JavaScript Variables: `var`, `let`, and `const`
 
 This repository demonstrates core JavaScript concepts related to **variables**, including `var`, `let`, and `const`, along with **scope**, **hoisting**, and the **Temporal Dead Zone (TDZ)**.
