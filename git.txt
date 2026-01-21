@@ -28,7 +28,6 @@ git config --global --unset user.name
 git config --global --unset user.email
 
 
-
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 
@@ -40,7 +39,7 @@ git branch
 git checkout <branch name>
 ex. git checkout development  
 
--------------------------------------
+-------------------------------------------
 
 git init
 git add .
