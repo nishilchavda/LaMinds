@@ -465,7 +465,9 @@ if (-1) {}    // true
 This repository documents my understanding of **JavaScript data types** and core concepts learned during my internship. It serves as a reference for future learning and practice.
 
 ---
-
+---
+# Day 3 Of JavaScript Operators
+---
 ````md
 # Day 3 Of JavaScript Operators – Basics
 
