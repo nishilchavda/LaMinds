@@ -466,8 +466,150 @@ This repository documents my understanding of **JavaScript data types** and core
 
 ---
 
+````md
+# Day 3 Of JavaScript Operators – Basics
+
+This document covers the most common **JavaScript operators** with simple examples.
+
+---
+
+## 1. Arithmetic Operators
+
+Used to perform mathematical operations.
+
+| Operator | Description | Example |
+|--------|------------|--------|
+| `+` | Addition / Concatenation | `1 + 2` → `3`<br>`"user" + "name"` → `"username"`<br>`5 + "5"` → `"55"` |
+| `-` | Subtraction | `2 - 1` → `1` |
+| `*` | Multiplication | `25 * 2` → `50` |
+| `/` | Division | `240 / 2` → `120` |
+| `%` | Modulus (remainder) | `12 % 4` → `0`<br>`9 % 2` → `1` |
+| `**` | Exponentiation (power) | `2 ** 3` → `8` |
+
+---
+
+## 2. Comparison Operators
+
+Return **boolean values** (`true` or `false`).
+
+| Operator | Description | Example |
+|--------|------------|--------|
+| `==` | Equal (value only) | `12 == "12"` → `true` |
+| `===` | Strict equal (value + type) | `12 === "12"` → `false` |
+| `!=` | Not equal (value only) | `12 != 13` → `true` |
+| `!==` | Strict not equal | `12 !== "12"` → `true` |
+| `>` | Greater than | `12 > 9` → `true` |
+| `<` | Less than | `12 < 113` → `true` |
+| `>=` | Greater than or equal | `22 >= 22` → `true` |
+| `<=` | Less than or equal | `13 <= 13` → `true` |
+
+---
+
+## 3. Assignment Operators
+
+Used to assign or update values.
+
+```js
+let a = 12;   // assignment
+a += 3;      // a = a + 3
+a -= 4;      // a = a - 4
+a *= 2;      // a = a * 2
+a /= 2;      // a = a / 2
+a %= 2;      // a = a % 2
+````
+
+---
+
+## 4. Logical Operators
+
+Used to combine conditions.
+
+### AND (`&&`)
+
+```js
+true && true   // true
+false && true  // false
+12 < 13 && 14 < 15  // true
+```
+
+### OR (`||`)
+
+```js
+true || false  // true
+false || false // false
+```
+
+### NOT (`!`)
+
+```js
+!true   // false
+!false  // true
+!12     // false
+!!12    // true
+```
+
+---
+
+## 5. Unary Operators
+
+Work with a single operand.
+
+| Operator | Description       | Example                           |
+| -------- | ----------------- | --------------------------------- |
+| `+`      | Convert to number | `+"5"` → `5`<br>`+"Name"` → `NaN` |
+| `-`      | Negative value    | `-5`                              |
+| `!`      | Logical NOT       | `!12` → `false`                   |
+| `typeof` | Check data type   | `typeof "name"` → `"string"`      |
+| `++`     | Increment         | `a++` (post)<br>`++a` (pre)       |
+| `--`     | Decrement         | `a--` (post)<br>`--a` (pre)       |
+
+Example:
+
+```js
+let a = 12;
+a++;   // returns 12, then a becomes 13
+++a;   // a becomes 14, then returns 14
+```
+
+---
+
+## 6. Ternary Operator
+
+Short form of `if-else`.
+
+```js
+condition ? trueResult : falseResult;
+
+12 > 13 
+  ? console.log("true")
+  : console.log("false");
+```
+
+---
+
+## 7. Type Checking Notes
+
+```js
+typeof null      // "object"
+typeof []        // "object"
+
+let arr = [];
+arr instanceof Array   // true
+
+typeof NaN       // "number"
+```
+
+### Important:
+
+* Use **`typeof`** for **primitive data types**
+* Use **`instanceof`** for **reference data types**
+
+---
+
 ### 🧑‍💻 Author
 
 **Nishil**
+
+
 
 
