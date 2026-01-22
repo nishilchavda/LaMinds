@@ -606,6 +606,201 @@ typeof NaN       // "number"
 * Use **`instanceof`** for **reference data types**
 
 ---
+Day 4 - JS Control Flow
+---
+---
+
+# 🚀 JavaScript Control Flow Statements (Internship Learning)
+
+## 📌 Overview
+
+Today during my internship, I learned **Control Flow Statements in JavaScript**.
+Control flow helps us decide **how and when the code executes** based on conditions.
+
+This repository contains examples of:
+
+* `if` statement
+* `if-else` statement
+* `if-else if-else` statement
+* `switch` statement
+* Early return pattern in functions
+
+---
+
+## 🔹 If Statement
+
+The `if` statement runs code **only when the condition is true**.
+
+```javascript
+if (12 < 13) {
+    console.log(true);
+}
+
+if (15 < 13) {
+    console.log(true);
+}
+
+if (!12) {
+    console.log(true);
+}
+
+if (!0) {
+    console.log(true);
+}
+```
+
+---
+
+## 🔹 If-Else Statement
+
+Used when we want to run **one block if condition is true** and **another block if false**.
+
+```javascript
+if (12 < 13) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+if (15 < 13) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+if (!12) {
+    console.log("number");
+} else {
+    console.log("Not A Number");
+}
+```
+
+---
+
+## 🔹 If-Else If-Else Statement
+
+Used when **multiple conditions** need to be checked.
+
+```javascript
+let loggedin = true;
+let admin = true;
+
+if (loggedin && admin) {
+    console.log("welcome admin");
+} else if (loggedin) {
+    console.log("welcome user");
+} else {
+    console.log("go to login page");
+}
+```
+
+---
+
+## 🔹 Switch Statement
+
+The `switch` statement is used when we compare **one value with multiple cases**.
+
+### Example 1:
+
+```javascript
+switch ("BOGO") {
+    case "First50":
+        console.log("50% off on First Order");
+        break;
+    case "BOGO":
+        console.log("Buy One get One");
+        break;
+    case "BalckFriday":
+        console.log("It's Black Friday Sale - Get at Rs. 50");
+        break;
+    default:
+        console.log("Offer Not Valid");
+}
+```
+
+### Example 2:
+
+```javascript
+let paymentMethod = "UPI";
+
+switch (paymentMethod) {
+    case "Card":
+        console.log("Pay using Debit/Credit Card");
+        break;
+    case "UPI":
+        console.log("Pay using UPI");
+        break;
+    case "Cash":
+        console.log("Cash on Delivery selected");
+        break;
+    default:
+        console.log("Payment method not supported");
+}
+```
+
+---
+
+## 🔹 Early Return Pattern
+
+Early return helps **stop function execution early** when a condition is met.
+
+### Example 1:
+
+```javascript
+function score(value) {
+    if (value > 90) {
+        return "value is more than 90";
+    } else if (value < 80) {
+        return "value is less than 80";
+    } else if (value < 70) {
+        return "value is less than 70";
+    } else if (value < 60) {
+        return "value is less than 60";
+    } else {
+        return "value is less than 50";
+    }
+}
+
+score(100);
+```
+
+### Example 2 (Shorter Syntax):
+
+```javascript
+function score1(value) {
+    if (value > 90) return "Value is more than 90";
+    else if (value < 80) return "Value is less than 80";
+    else if (value < 70) return "Value is less than 70";
+    else if (value < 60) return "Value is less than 60";
+    else return "Value is less than 60";
+}
+
+score1(65);
+```
+
+### Example 3 (Best Ordering):
+
+```javascript
+function score2(value) {
+    if (value < 60) return "Value is less than 60";
+    else if (value < 70) return "Value is less than 70";
+    else if (value < 80) return "Value is less than 80";
+    else if (value < 90) return "Value is less than 90";
+    else return "Value is less than 90";
+}
+
+score2(65);
+```
+
+---
+
+## 📚 What I Learned day 4
+
+* How JavaScript evaluates **true & false**
+* Writing clean conditional logic
+* Using `switch` instead of multiple `if-else`
+* Optimizing functions using **early return**
+
 
 ### 🧑‍💻 Author
 
