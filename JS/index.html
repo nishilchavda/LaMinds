@@ -11,7 +11,9 @@
     <!-- <script src="operator.js"></script> -->
     <!-- <script src="controllflow.js"></script> -->
     <!-- <script src="loops.js"></script> -->
-    <script src="functions.js"></script>
+    <!-- <script src="functions.js"></script> -->
+    <!-- <script src="array.js"></script> -->
+    <script src="object.js"></script>
 
     <h1>Day 1 of JS Variables - Example or Excercise:</h1>
     <div>
@@ -647,7 +649,285 @@ total += num;
 }</p>
 <p>Ans and Why</p>
 </div>
- 
+ <div>
+// Q1. push()
+// You are building a to-do app. Add a new task 'Buy milk' to the tasks array.
+let tasks = ['Wake up', 'Brush teeth'];
 
+
+<br>
+<br>
+
+// Q2. pop()
+// Remove the last notification from the notifications array.
+let notifications = ['Email', 'Message', 'Reminder'];
+
+
+<br>
+<br>
+
+// Q3. shift()
+// A queue system removes the first customer. Remove the first customer.
+let customers = ['Customer1', 'Customer2', 'Customer3'];
+
+
+<br>
+
+// Q4. unshift()
+// A new song is added to the beginning of the playlist.
+let playlist = ['Song B', 'Song C'];
+
+<br>
+
+
+// Q5. splice()
+// In a classroom list, remove 'Alex' and add 'John' and 'Sara' in the same position.
+let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+
+
+<br>
+
+// Q6. splice()
+// From the menu, remove 2 items starting from index 1.
+let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
+
+<br>
+
+
+// Q7. slice()
+// Create a new array that contains only weekend days.
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+
+<br>
+
+// Q8. reverse()
+// Reverse the order of levels in a game.
+let levels = ['Easy', 'Medium', 'Hard'];
+<br>
+
+
+
+// Q9. sort()
+// Sort the scores in ascending order.
+let scores = [45, 12, 78, 34, 89];
+
+<br>
+
+// Q10. sort() with numbers
+// Sort the prices from lowest to highest.
+let prices = [199, 49, 999, 299, 149];
+
+<br>
+
+
+// Q11. slice() vs splice()
+// From the array, create a new array of the first 3 items WITHOUT changing the original array.
+let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
+
+
+<br>
+
+// Q12. splice() complex
+// In the array below:
+// 1. Remove 'Blue'
+// 2. Add 'Purple' and 'Orange' at the same position
+let colors = ['Red', 'Green', 'Blue', 'Yellow'];
+ans:colors.splice(2, 1, 'Purple', 'Orange')
+
+<br>
+// Q13. reverse() + push()
+// Reverse the array and then add 'Final Step' at the end.
+let steps = ['Step 1', 'Step 2', 'Step 3'];
+
+<br>
+// Q14. sort() strings
+// Sort names alphabetically, ignoring case sensitivity.
+let names = ['alice', 'Bob', 'charlie', 'David'];
+ans: names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+
+
+<br>
+
+// Q15. Combination Question
+// You are managing a movie watchlist:
+// 1. Add 'Inception'
+// 2. Remove the first movie
+// 3. Sort the list alphabetically
+let movies = ['Avatar', 'Titanic', 'Gladiator'];
+<br>
+// Q16. splice() return value
+// What does the splice method return in this case?
+let nums1 = [1, 2, 3, 4];
+nums1.splice(1, 2);
+
+<br>
+
+
+// Q17. slice() immutability check
+// After executing slice, does the original array change?
+let nums2 = [10, 20, 30, 40];
+let result = nums2.slice(1, 3);
+<br>
+
+// Q19. reverse() mutation
+// After reversing, what happens to the original array reference?
+let letters = ['a', 'b', 'c'];
+let reversedLetters = letters.reverse();
+
+<br>
+// Q21. splice() edge case
+// What happens if deleteCount is 0?
+let arr = ['x', 'y', 'z'];
+arr.splice(1, 0, 'new');
+
+<br>
+
+// Q23. slice() negative index
+// What elements are returned?
+let values = [100, 200, 300, 400, 500];
+let sliced = values.slice(-3, -1);
+
+
+<br>
+
+// Q24. splice() vs slice() decision
+// Which method would you use if you want to:
+// a) Update the original array
+// b) Keep the original array unchanged
+
+
+<br>
+// Q25. Chained methods (brain teaser)
+// What is the final value of arr?
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift());
+</div>
+
+<div>
+    1. Double daily steps count
+
+Real life: Fitness app doubling step goal
+
+const steps = [1000, 2000, 3000];
+
+function doubleSteps(step) {
+  return step * 2;
+}
+
+const newSteps = steps.map(doubleSteps);
+
+
+
+2. Convert minutes to seconds
+
+Real life: Video duration calculation
+
+const minutes = [1, 5, 10];
+
+const seconds = minutes.map(function(min) {
+  return min * 60;
+});
+
+
+
+3. Add ₹50 delivery charge to prices
+
+Real life: Food delivery app
+
+const prices = [200, 350, 500];
+
+const finalPrices = prices.map(price => price + 50);
+
+
+
+4. Convert exam marks to grades
+
+Real life: Result system
+
+const marks = [35, 72, 88, 40];
+
+function getGrade(mark) {
+  return mark >= 40 ? 'Pass' : 'Fail';
+}
+
+const grades = marks.map(getGrade);
+
+
+
+5. Capitalize names
+
+Real life: Display usernames properly
+
+const names = ['rahul', 'neha', 'amit'];
+
+const formattedNames = names.map(name =>
+  name[0].toUpperCase() + name.slice(1)
+);
+
+
+
+6. Apply 10% discount
+
+Real life: Shopping sale
+
+const prices = [500, 1000, 1500];
+
+function applyDiscount(price) {
+  return price - price * 0.10;
+}
+
+const discounted = prices.map(applyDiscount);
+
+
+
+7. Add bonus points to scores based on condition
+
+Real life: Game scoring system
+
+const scores = [45, 60, 85];
+
+const finalScores = scores.map(score => {
+  if (score >= 80) return score + 20;
+  if (score >= 50) return score + 10;
+  return score;
+});
+
+
+
+8. Convert temperatures with formula
+
+Real life: Weather app
+
+const celsius = [0, 20, 30];
+
+function toFahrenheit(temp) {
+  return (temp * 9/5) + 32;
+}
+
+const fahrenheit = celsius.map(toFahrenheit);
+
+
+
+9. Generate table of numbers
+
+Real life: Math learning app
+
+const numbers = [1, 2, 3, 4];
+
+const tableOfTwo = numbers.map(num => num * 2);
+
+
+
+10. Combine map with string formatting
+
+Real life: SMS notification system
+
+const balances = [500, 1200, 300];
+
+const messages = balances.map(balance =>
+  `Your balance is ₹${balance}`
+);
+</div>
   </body>
 </html>
