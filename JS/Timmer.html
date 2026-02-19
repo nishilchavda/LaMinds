@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timmer</title>
+    <style>
+      #main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: navy;
+      }
+      .card {
+        width: 500px;
+        height: auto;
+        border: 1px solid navy;
+        padding: 10px;
+        border-radius: 1rem;
+        background-color: rgb(135, 207, 235, 0.332);
+        text-align: center;
+        display: none;
+      }
+      .outer{
+        width: 50%;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: #222;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .progress-card{
+        margin: 10px 0;
+        height: 5px;
+        width: 100%;
+        background-color: #555;
+        border-radius: 7px;
+        overflow: hidden;
+      }
+      .progress-bar{
+        height: 100%;
+        width: 0%;
+        background: white;
+        transition: width 0.3s ease;
+      }
+      .percent {
+        font-size           : 16px;
+        font-weight: 500;
+        color: #d1d1d1;
+        letter-spacing: 0.5px;
+      }
+      h2{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="card">
+        <h1>Welcome to Surat</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
+          veniam, laborum expedita ullam repellat tempore suscipit dolor harum
+          quasi praesentium aliquid quod tenetur? Quasi molestiae placeat error
+          ea maiores nam?
+        </p>
+        <button>Close</button>
+      </div>
+    </div>
+
+    <div id="download">
+      <div class="outer">
+        <h2>Downloading ...</h2>
+        <div class="progress-card">
+          <div class="progress-bar"></div>
+        </div>
+        <p class="percent"></p>
+      </div>
+    </div>
+
+    <script src="Timmer.js"></script>
+  </body>
+</html>

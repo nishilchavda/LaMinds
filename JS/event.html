@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cs-body {
+        background-color: black;
+        color: white;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border: 1px solid red;
+      }
+      .red {
+        background-color: red;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        border: 5px solid black;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: darkgreen;
+      }
+
+      .outer {
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .most_inner {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(16, 16, 16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Dark Mode</button>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <div class="box"></div>
+    <button class="fillbox">Change Div color : <span>Red</span></button>
+    <br /><br />
+    <input class="text" type="text" />
+    <h2>Select Your Device: <i class="device">None</i></h2>
+    <select class="sell">
+      <option value="Phone">Phone</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Watch">Watch</option>
+      <option value="Tablet">Tablet</option>
+    </select>
+    <br /><br />
+    <div class="box1"></div>
+    <br />
+    Background Color - <span class="bgname"></span>
+    <input type="color" class="bgcolor" />
+    <br />
+    Box Border Color - <span class="bname"></span>
+    <input type="color" class="bcolor" />
+
+    <form action="">
+      <input type="text" />
+      <input type="submit" />
+    </form>
+    <br />
+
+    <div class="box2"></div>
+    <br />
+
+    <input type="key" defaultValue="1" class="key" />
+
+    <div class="outer">
+      <div class="inner">
+        <div class="inner_box">
+          <div class="most_inner">
+            <button class="btn2">Click Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <h1>Shopping List</h1>
+    <ul>
+      <li><input type="checkbox" name="" id="" class="inp_check">Laptop i7 13th Gen</li>
+      <li><input type="checkbox" name="" id="" class="inp_check">HardDisk 1TB SSD</li>
+      <li><input type="checkbox" name="" id="" class="inp_check">Power Cable</li>
+      <li><input type="checkbox" name="" id="" class="inp_check">RGB Keyboard</li>
+      <li><input type="checkbox" name="" id="" class="inp_check">Track Pad</li>
+    </ul>
+
+    <!-- Text Counter -->
+
+    <input type="text" id="counter" />
+    <h1>Text Counter: <b class="count">0</b></h1>
+
+
+    <script src="event.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .box{
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://i1.sndcdn.com/artworks-000063431287-wlirar-t500x500.jpg" alt="">
+    </div>
+    
+    <script src="mouseMove.js"></script>
+</body>
+</html>
