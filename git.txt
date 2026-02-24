@@ -26,6 +26,7 @@ git config --list
 unset:
 git config --global --unset user.name
 git config --global --unset user.email
+git config --list
 
 
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
