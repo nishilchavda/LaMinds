@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Card</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+      tailwind.config = {
+            theme: {
+              extend: {
+                fontFamily: {
+                  serif: ['Cormorant Garamond', 'serif'],
+                  sans: ['Inter', 'sans-serif'],
+                }
+              }
+            }
+          }
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(217, 119, 6, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(217, 119, 6, 0.4);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      .animate-delay-100 {
+        animation-delay: 0.1s;
+        opacity: 0;
+      }
+      .animate-delay-200 {
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+      .animate-delay-300 {
+        animation-delay: 0.3s;
+        opacity: 0;
+      }
+      .animate-delay-400 {
+        animation-delay: 0.4s;
+        opacity: 0;
+      }
+      .shimmer-border {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(217, 119, 6, 0.3),
+          transparent
+        );
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-stone-950 flex items-center justify-center p-6">
+    <div class="card grid grid-cols-3">
+      <!-- User Card Component -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
