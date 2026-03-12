@@ -1,24 +1,26 @@
 function Userdata() {
-    fetch("https://dummyjson.com/products?limit=50").then(function (rawData){
-        console.log(rawData);
-        return rawData.json();
-    }).then((data)=>{
-        console.log(data);
-
-        data.products.forEach(product => {
-            RenderUI(product)
-        });
+  fetch("https://dummyjson.com/products?limit=50")
+    .then(function (rawData) {
+      console.log(rawData);
+      return rawData.json();
     })
-    .catch((err)=>{
-        console.log(err);
+    .then((data) => {
+      console.log(data);
+
+      data.products.forEach((product) => {
+        RenderUI(product);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 Userdata();
 
 function RenderUI(product) {
-    let card = document.querySelector(".card");
+  let card = document.querySelector(".card");
 
-    card.innerHTML += `<div
+  card.innerHTML += `<div
         class="flex min-h-screen items-center justify-center bg-slate-950 p-6"
       >
         <div class="group relative w-full max-w-sm">
@@ -116,5 +118,3 @@ function RenderUI(product) {
         </div>
       </div>`;
 }
-
-RenderUI();

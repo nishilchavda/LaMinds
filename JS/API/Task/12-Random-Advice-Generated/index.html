@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Syne:wght@800&display=swap');
+        
+        body { background-color: #f5f5f0; }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .font-space { font-family: 'Space Grotesk', sans-serif; }
+
+        .brutalist-card {
+            box-shadow: 16px 16px 0px 0px #2563eb;
+            transition: all 0.2s ease;
+        }
+        .brutalist-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 20px 20px 0px 0px #2563eb;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #2563eb;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+    <div class="card"></div>
+    <script src="script.js"></script>
+</body>
+</html>

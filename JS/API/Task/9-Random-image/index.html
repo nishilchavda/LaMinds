@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap");
+
+      body {
+        font-family: "Fredoka", sans-serif;
+      }
+
+      .dog-card {
+        transform: rotate(-1deg);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .dog-card:hover {
+        transform: rotate(0deg) scale(1.02);
+      }
+
+      .floating-paw {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(10deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-yellow-400 min-h-screen flex items-center justify-center p-6">
+    <div class="card"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

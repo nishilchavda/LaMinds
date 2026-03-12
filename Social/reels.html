@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels - FlashConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.classList.add('dark'); } else { document.documentElement.classList.remove('dark'); }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .animate-spin-slow { animation: spin-slow 4s linear infinite; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans antialiased h-screen overflow-hidden flex flex-col transition-colors duration-300">
+
+    <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 fixed z-30 w-full h-16 flex items-center justify-between px-4 lg:px-10 transition-colors duration-300">
+        <div class="flex items-center gap-2 cursor-pointer group">
+            <div class="bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center transition-transform duration-500 group-hover:rotate-180"><i class="fa-solid fa-bolt text-xl"></i></div>
+            <span class="text-xl font-bold text-gray-900 dark:text-white hidden sm:block">FlashConnect</span>
+        </div>
+        <div class="hidden md:flex relative w-1/3 group">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa-solid fa-search"></i></span>
+            <input type="text" class="w-full bg-gray-100 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm" placeholder="Search...">
+        </div>
+        <div class="flex items-center gap-4 sm:gap-6">
+            <button class="text-gray-500 dark:text-gray-400 hover:text-blue-500 text-xl transition-transform hover:scale-110 duration-200"><i class="fa-regular fa-bell"></i></button>
+            <a href="profile.html"><img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="w-9 h-9 rounded-full object-cover hover:scale-105 transition-all"></a>
+        </div>
+    </nav>
+
+    <main class="flex-1 overflow-hidden pt-16 flex justify-center bg-black md:bg-gray-100 md:dark:bg-gray-900">
+        <div class="w-full max-w-7xl flex gap-6 md:px-4 md:py-6 h-full justify-center">
+            
+            <aside class="hidden md:block w-64 h-full overflow-y-auto no-scrollbar pr-4">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-house w-6 text-center text-lg"></i> Home
+                    </a>
+                    <a href="explore.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-compass w-6 text-center text-lg"></i> Explore
+                    </a>
+                    <a href="reels.html" class="flex items-center gap-4 p-3 rounded-lg bg-blue-50 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-semibold transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-video w-6 text-center text-lg"></i> Reels
+                    </a>
+                    <a href="bookmarks.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-bookmark w-6 text-center text-lg"></i> Bookmarks
+                    </a>
+                    <a href="communities.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-users w-6 text-center text-lg"></i> Communities
+                    </a>
+                    <a href="profile.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-user w-6 text-center text-lg"></i> Profile
+                    </a>
+                    <a href="settings.html" class="flex items-center gap-4 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 font-medium transition-all duration-300 hover:translate-x-2">
+                        <i class="fa-solid fa-gear w-6 text-center text-lg group-hover:rotate-90 transition-transform duration-300"></i> Settings
+                    </a>
+                    <button class="mt-4 w-full bg-blue-500 text-white font-bold py-3 rounded-full hover:bg-blue-600 transition-all duration-300 shadow-md hover:-translate-y-1 active:scale-95">
+                        Create Post
+                    </button>
+                </div>
+            </aside>
+
+            <section class="flex-1 max-w-md w-full h-full relative">
+                <div id="reels-container" class="w-full h-full overflow-y-scroll snap-y snap-mandatory no-scrollbar bg-black md:rounded-2xl md:border border-gray-800 pb-16 md:pb-0"></div>
+                <div id="loading-spinner" class="absolute inset-0 flex justify-center items-center pointer-events-none"><i class="fa-solid fa-spinner animate-spin text-4xl text-white"></i></div>
+            </section>
+            
+            <aside class="hidden lg:block w-80 h-full"></aside>
+        </div>
+    </main>
+
+    <div class="md:hidden fixed bottom-0 w-full bg-black border-t border-gray-800 flex justify-around p-3 z-30 transition-transform duration-300">
+        <a href="index.html" class="text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-house"></i></a>
+        <a href="explore.html" class="text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-compass"></i></a>
+        <a href="reels.html" class="text-white text-xl hover:scale-125 transition-transform"><i class="fa-solid fa-video"></i></a>
+        <a href="profile.html" class="text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-user"></i></a>
+    </div>
+
+    <div id="post-modal" class="fixed inset-0 z-50 bg-black/80 flex justify-center items-center backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl h-[85vh] rounded-xl overflow-hidden flex flex-col md:flex-row shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <div class="w-full md:w-3/5 bg-black h-64 md:h-full flex items-center justify-center relative">
+                <div id="modal-media-container" class="w-full h-full flex items-center justify-center"></div>
+            </div>
+            
+            <div class="w-full md:w-2/5 h-full flex flex-col bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800">
+                
+                <div class="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
+                    <div class="flex gap-3 items-center">
+                        <img id="modal-avatar" src="" class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700">
+                        <div>
+                            <h4 id="modal-username" class="font-bold text-gray-900 dark:text-white text-sm"></h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto no-scrollbar p-4 flex flex-col gap-4">
+                    <div class="flex gap-3">
+                        <img id="modal-caption-avatar" src="" class="w-8 h-8 rounded-full">
+                        <div>
+                            <span id="modal-caption-username" class="font-bold text-gray-900 dark:text-white text-sm"></span>
+                            <p id="modal-caption" class="text-gray-800 dark:text-gray-200 text-sm mt-1"></p>
+                        </div>
+                    </div>
+                    <hr class="border-gray-100 dark:border-gray-800">
+                </div>
+                
+                <div class="p-4 border-t border-gray-200 dark:border-gray-800">
+                    <div class="flex justify-between items-center text-gray-500 dark:text-gray-400 text-xl mb-3">
+                        <div class="flex gap-4">
+                            <button class="hover:text-red-500 transition-colors active:scale-75"><i class="fa-regular fa-heart"></i></button>
+                            <button class="hover:text-blue-500 transition-colors active:scale-75"><i class="fa-regular fa-comment"></i></button>
+                        </div>
+                        <button class="text-blue-500 transition-colors active:scale-75"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="flex gap-3">
+                        <input type="text" class="flex-1 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Add a comment...">
+                        <button class="text-blue-500 font-bold px-2 hover:text-blue-600">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="reels.js"></script>
+</body>
+</html>

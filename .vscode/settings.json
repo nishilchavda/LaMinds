@@ -1,3 +1,4 @@
 {
-    "tailwindcss-intellisense.trace.server": "off"
+    "tailwindcss-intellisense.trace.server": "off",
+    "liveServer.settings.port": 5501
 }

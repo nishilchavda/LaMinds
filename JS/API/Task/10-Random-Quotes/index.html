@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Outfit:wght@300;400&display=swap');
+        
+        .serif-quote { font-family: 'Cormorant Garamond', serif; }
+        .sans-ui { font-family: 'Outfit', sans-serif; }
+
+        .zen-gradient {
+            background: radial-gradient(circle at top right, #fef3c7 0%, #fff 50%, #f1f5f9 100%);
+        }
+
+        .float-slow {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body class="zen-gradient min-h-screen flex items-center justify-center p-6 sans-ui">
+
+    <div class="card"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

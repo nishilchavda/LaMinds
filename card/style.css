@@ -1,0 +1,214 @@
+:root {
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #8e8e93;
+    --accent-color: #000000;
+    --price-bg: #e5e7eb;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --radius-lg: 40px;
+    --radius-md: 24px;
+    --radius-sm: 16px;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    width: 380px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 8px; /* Inner padding for that premium border look */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Badge Styling */
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    z-index: 10;
+}
+
+/* Logo Styling */
+.brand-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: contain;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    width: 20px;
+    border-radius: 3px;
+}
+
+/* Card Body */
+.card-body {
+    padding: 24px 20px 20px 20px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.product-tagline {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.product-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    background: var(--price-bg);
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.buy-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: #333;
+    padding-right: 28px;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.buy-btn:hover .arrow-icon {
+    transform: rotate(45deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.8s ease-out;
+}

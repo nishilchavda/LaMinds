@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap');
+        
+        body { 
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at top, #1a2a6c, #0d1117, #000000);
+        }
+
+        .character-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255, 215, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+
+        .shimmer-gold {
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white p-6 md:p-12">
+
+    <header class="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="space-y-1">
+            <h1 class="text-4xl font-800 tracking-tighter bg-gradient-to-r from-blue-400 to-yellow-200 bg-clip-text text-transparent">
+                DISNEY ARCHIVE
+            </h1>
+            <p class="text-xs text-slate-500 uppercase tracking-[0.4em] font-semibold">Character Repository v2.0</p>
+        </div>
+
+        <div class="flex items-center gap-8 bg-white/5 px-8 py-4 rounded-3xl border border-white/10 backdrop-blur-md">
+            <div class="text-center">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Total</p>
+                <p class="text-xl font-bold text-yellow-500">${d.info.count}</p>
+            </div>
+            <div class="h-8 w-px bg-white/10"></div>
+            <div class="text-center">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Pages</p>
+                <p class="text-xl font-bold">197</p>
+            </div>
+            <button class="ml-4 h-10 w-10 rounded-full bg-blue-600 hover:bg-yellow-500 transition-colors flex items-center justify-center group">
+                <i class="fas fa-chevron-right text-sm group-hover:text-black transition-colors"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        <div class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
