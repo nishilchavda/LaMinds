@@ -50,6 +50,18 @@ git push -u origin main
 
 -------------------------------------------
 
-git add . 
-git commit -m ""
-git push
+check status--
+git status
+
+If error comes like: "remote already exists"
+git remote remove origin
+git remote add origin https://github.com/nishilchavda/LaMinds
+
+daily--
+git add .
+git commit -m "Example"
+git push origin main
+
+remove .git---
+before go to that folder---
+rmdir /s /q .git
