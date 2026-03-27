@@ -1,35 +1,21 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import ProductCard from "../ui/ProductCard";
-import { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 const ProductBar = () => {
-  const [product, setProduct] = useState([]);
-
-  useEffect(() => {
-    const FetchProducts = async () => {
-      try {
-        let response = await axios.get("https://dummyjson.com/products");
-        setProduct(response.data.products);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    FetchProducts();
-  }, []);
-
+  
   return (
     <>
       <section className="p-6 flex items-center justify-center">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-          {product.map((data) => {
-            return (
-              <Link to={`/product/${data.id}`} key={data.id}>
-                <ProductCard product_data={data} />
-              </Link>
-            );
-          })}
+        <div className="w-full ">
+            <h3>Our Products</h3>
+            <div>
+                <h1>Our Top Seller Products</h1>
+                <div>
+                    <div className="px-3 py-1 border border-[#583101] font-medium text-md inline-block">All</div>
+                    <div className="px-3 py-1 border border-[#583101] font-medium text-md inline-block">Woman</div>
+                    <div className="px-3 py-1 border border-[#583101] font-medium text-md inline-block">Man</div>
+                    <div className="px-3 py-1 border border-[#583101] font-medium text-md inline-block">Accessories</div>
+                </div>
+            </div>
         </div>
       </section>
     </>

@@ -1,5 +1,5 @@
 function CardData() {
-    fetch("https://dummyjson.com/products")
+    fetch("https://dummyjson.com/products?limit=12")
     .then(function (rawData){
         return rawData.json();
     })
