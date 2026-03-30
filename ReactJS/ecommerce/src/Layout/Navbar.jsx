@@ -1,5 +1,6 @@
 import { Heart, Home, Menu, Search, ShoppingBag, User2, X } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [ShowMenu, setShowMenu] = useState(false);
@@ -21,16 +22,19 @@ const Navbar = () => {
           {/* Links */}
           <ul className="flex items-center justify-center gap-x-4 text-lg font-normal">
             <li>
-              <a href="">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="">Collection</a>
+              <Link to="/collection">Collection</Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
 
@@ -75,24 +79,31 @@ const Navbar = () => {
             <div className="w-[70%] z-200 bg-white/35 backdrop-blur-sm h-screen fixed top-0 flex items-center justify-center">
               {/* Close Button  */}
               <div className="absolute top-4 right-4">
-                <X className="w-10 h-10" strokeWidth={3} onClick={()=>{
-                  setShowMenu(false)
-                }}/>
+                <X
+                  className="w-10 h-10"
+                  strokeWidth={3}
+                  onClick={() => {
+                    setShowMenu(false);
+                  }}
+                />
               </div>
 
               {/* Links */}
               <ul className="flex flex-col items-center justify-center gap-y-10 text-3xl font-semibold">
                 <li>
-                  <a href=""> Home</a>
+                  <Link to="/"> Home</Link>
                 </li>
                 <li>
-                  <a href="">Collection</a>
+                  <Link to="/collection">Collection</Link>
                 </li>
                 <li>
-                  <a href="">About</a>
+                  <Link to="/shop">Shop</Link>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>

@@ -56,10 +56,11 @@ git status
 If error comes like: "remote already exists"
 git remote remove origin
 git remote add origin https://github.com/nishilchavda/LaMinds
+git remote add origin https://github.com/nishilchavda/LaMinds2
 
 daily--
 git add .
-git commit -m "Example"
+git commit -m ""
 git push origin main
 
 remove .git---

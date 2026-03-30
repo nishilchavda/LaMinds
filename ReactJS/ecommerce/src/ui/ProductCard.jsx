@@ -12,7 +12,7 @@ const ProductCard = ({ product_data }) => {
         {/* Discount Badge */}
         <div className="absolute top-4 left-4 bg-white px-3 py-1 shadow-sm">
           <span className="text-[#4db195] text-xs font-bold">
-            {product_data.discountPercentage}% off
+            {Math.floor(product_data.discountPercentage)}% off
           </span>
         </div>
 

@@ -1,13 +1,15 @@
-const DetailsBar = () => {
+import React from "react";
+
+const DeatilsBar = () => {
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="flex items-center justify-between px-20 py-10">
         {/* icon 1 */}
         <div className="flex items-center justify-center gap-4">
           {/* svg */}
           <div className="w-24 overflow-hidden p-3">
             <img
-              src="\icons\01.png"
+              src="/icons/01.png"
               alt="cart"
               className="w-full h-full object-cover"
             />
@@ -26,8 +28,8 @@ const DetailsBar = () => {
           {/* svg */}
           <div className="w-24 overflow-hidden p-3">
             <img
-              src="\icons\02.png"
-              alt="cart"
+              src="icons/02.png"
+              alt="payment"
               className="w-full h-full object-cover"
             />
           </div>
@@ -43,7 +45,7 @@ const DetailsBar = () => {
           {/* svg */}
           <div className="w-24 overflow-hidden p-3">
             <img
-              src="\icons\03.png"
+              src="/icons/03.png"
               alt="cart"
               className="w-full h-full object-cover"
             />
@@ -61,5 +63,5 @@ const DetailsBar = () => {
   );
 };
 
-export default DetailsBar;
+export default DeatilsBar;
  
