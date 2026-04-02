@@ -1,5 +1,5 @@
-const { error } = require("node:console");
-const fs = require("node:fs");
+// const { error } = require("node:console");
+// const fs = require("node:fs");
 
 // fs = file system
 
@@ -104,3 +104,9 @@ const fs = require("node:fs");
 //     if(e) throw error;
 //     console.log("Folder Delete Successfully!");
 // });
+
+import chalk from "chalk";
+
+console.log(chalk.blue("Hello, World!"));
+console.log(chalk.blue.bgCyan("Hello, World!"));
+console.log(chalk.bgGreen.green.bold("Hello, World!"));

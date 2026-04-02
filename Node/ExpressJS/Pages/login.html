@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Liquid Glass Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'liquid-flow': 'liquidFlow 15s ease infinite',
+                    },
+                    keyframes: {
+                        liquidFlow: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    },
+                    backgroundImage: {
+                        'modern-abstract': "url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2000&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS needed for the subtle liquid reflection and internal glow */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.05); /* Very faint background color */
+            backdrop-filter: blur(16px) saturate(180%); /* Core Glass effect */
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-radius: 24px;
+            
+            /* The 'Liquid' Internal Reflection (Top Left Edge) */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            
+            /* The 'Glossy' liquid sheen across the surface */
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.2), /* Soft Drop Shadow */
+                inset 0 0 12px 1px rgba(255, 255, 255, 0.1), /* Internal Ambient Glow */
+                inset 0 4px 4px 0 rgba(255, 255, 255, 0.2); /* Superior 'Liquid Edge' Highlight */
+            
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* The moving "sheen" light effect across the glass */
+        .liquid-glass::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 0.08) 50%,
+                rgba(255, 255, 255, 0) 60%
+            );
+            animation: liquid-flow 6s infinite linear;
+            pointer-events: none;
+        }
+
+        /* Input styling specifically to match glass */
+        .glass-input {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(168, 85, 247, 0.5); /* Purple focus */
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+            outline: none;
+        }
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen relative font-sans antialiased overflow-hidden">
+
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <div class="absolute inset-0 bg-modern-abstract bg-cover bg-center scale-110 blur-3xl opacity-60"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20 animate-liquid-flow bg-[length:400% 400%]"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-md p-4">
+        
+        <div class="liquid-glass p-10 md:p-12">
+            
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-extrabold tracking-tight text-white mb-3">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+                        Portal
+                    </span>
+                    Login
+                </h2>
+                <p class="text-gray-300 text-sm font-medium">Step into the digital flow.</p>
+            </div>
+
+            <form action="#" method="POST" class="space-y-6">
+                
+                <div class="relative group">
+                    <label for="email" class="block text-xs font-bold text-gray-300 uppercase tracking-widest mb-2 ml-1">Identity</label>
+                    <input type="email" id="email" name="email" required
+                        class="glass-input w-full px-5 py-3.5 rounded-xl text-sm"
+                        placeholder="you@nebula.io">
+                </div>
+
+                <div class="relative group">
+                    <div class="flex justify-between items-center mb-2 ml-1">
+                        <label for="password" class="block text-xs font-bold text-gray-300 uppercase tracking-widest">Access Key</label>
+                        <a href="#" class="text-xs text-purple-300 hover:text-pink-300 transition font-semibold">Lost Key?</a>
+                    </div>
+                    <input type="password" id="password" name="password" required
+                        class="glass-input w-full px-5 py-3.5 rounded-xl text-sm"
+                        placeholder="••••••••••••">
+                </div>
+
+                <div class="flex items-center justify-between pb-2">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="h-4 w-4 rounded border-gray-700 bg-gray-900 text-purple-500 focus:ring-purple-600 focus:ring-offset-gray-900">
+                        <label for="remember" class="ml-2.5 block text-sm text-gray-300 font-medium">Keep Session Active</label>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full relative group overflow-hidden bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-4 px-6 rounded-xl transition duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50">
+                    <span class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                    
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        Initialize Session
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </span>
+                </button>
+            </form>
+
+            <div class="mt-12 text-center pt-8 border-t border-white/10">
+                <p class="text-sm text-gray-400 font-medium">
+                    New to the network? 
+                    <a href="#" class="text-purple-300 font-bold hover:text-pink-300 transition underline underline-offset-4 decoration-purple-500/50 hover:decoration-pink-500/50">
+                        Request Access
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+        <p class="text-center text-xs text-gray-600 mt-6 relative z-10">BG Image via Unsplash</p>
+    </div>
+
+</body>
+</html>
