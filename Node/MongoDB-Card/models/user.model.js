@@ -7,7 +7,7 @@ let userSchema = mongoose.Schema(
     fullname: String,
     username: String,
     email: String,
-    image: String,
+    Image: String,
   },
   { timestamps: true },
 );
