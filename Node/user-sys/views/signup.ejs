@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | BrandLogo Bauhaus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #F0F0F0;
+        background-image: radial-gradient(#121212 1px, transparent 1px);
+        background-size: 32px 32px;
+        background-attachment: fixed;
+      }
+      .triangle {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    </style>
+  </head>
+  <body class="text-[#121212] min-h-screen flex items-center justify-center p-4 md:p-8">
+    
+    <div class="relative w-full max-w-5xl flex flex-col md:flex-row border-4 border-[#121212] bg-white shadow-[12px_12px_0px_0px_rgba(18,18,18,1)] overflow-hidden">
+      
+      <div class="w-full md:w-1/3 bg-[#1040C0] border-b-4 md:border-b-0 md:border-r-4 border-[#121212] p-8 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute top-[-20px] left-[-20px] w-32 h-32 rounded-full bg-[#D02020] border-4 border-[#121212] opacity-80"></div>
+        <div class="absolute bottom-10 right-[-30px] w-40 h-40 bg-[#F0C020] border-4 border-[#121212] rotate-12"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center gap-2 mb-12">
+            <div class="w-6 h-6 rounded-full bg-[#D02020] border-2 border-[#121212]"></div>
+            <div class="w-6 h-6 bg-[#F0C020] border-2 border-[#121212]"></div>
+            <div class="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-bottom-[20px] border-b-[#ffffff] triangle"></div>
+            <span class="text-white font-black text-xl tracking-tighter uppercase ml-2">BrandLogo</span>
+          </div>
+          <h1 class="text-white text-5xl md:text-6xl font-black leading-[0.9] uppercase tracking-tighter">
+            Create <br/> New <br/> <span class="text-[#F0C020]">Account</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="w-full md:w-2/3 p-8 md:p-12 bg-white">
+        <h2 class="text-4xl font-black uppercase tracking-tighter mb-8 border-b-4 border-[#121212] pb-2 inline-block">
+          Create Account
+        </h2>
+
+        <form action="/create" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="md:col-span-2">
+            <label for="fullname" class="block text-sm font-black uppercase tracking-widest mb-2">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:bg-[#F0C020]/10 transition-colors placeholder:text-gray-400 font-bold"
+              placeholder="WASSILY KANDINSKY"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-black uppercase tracking-widest mb-2">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:bg-[#1040C0]/10 transition-colors placeholder:text-gray-400 font-bold"
+              placeholder="ART@BAUHAUS.DE"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="username" class="block text-sm font-black uppercase tracking-widest mb-2">Username</label>
+            <input
+              type="text"
+              id="uname"
+              name="username"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:bg-[#D02020]/10 transition-colors placeholder:text-gray-400 font-bold"
+              placeholder="DESIGNER_01"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-black uppercase tracking-widest mb-2">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:ring-0 font-bold"
+              placeholder="+49 000 000"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="pimg" class="block text-sm font-black uppercase tracking-widest mb-2">Image URL</label>
+            <input
+              type="text"
+              id="pimg"
+              name="image"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:ring-0 font-bold"
+              placeholder="HTTP://..."
+              required
+            />
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="password" class="block text-sm font-black uppercase tracking-widest mb-2">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="w-full px-4 py-3 border-4 border-[#121212] rounded-none focus:outline-none focus:ring-0 font-bold"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="md:col-span-2 pt-4">
+            <button
+              type="submit"
+              class="w-full bg-[#D02020] text-white font-black uppercase tracking-widest py-4 px-6 border-4 border-[#121212] shadow-[6px_6px_0px_0px_rgba(18,18,18,1)] hover:bg-[#b01a1a] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
+            >
+              Sign Up Now
+            </button>
+          </div>
+        </form>
+
+        <p class="mt-8 text-sm font-bold uppercase tracking-tight">
+          Already have account ? 
+          <a href="/" class="text-[#1040C0] underline decoration-4 underline-offset-4 hover:bg-[#1040C0] hover:text-white px-1">Login</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
